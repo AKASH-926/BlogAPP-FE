@@ -1,0 +1,34 @@
+#login-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    border: 1px solid;
+    width: 15%;
+    margin-left: 40%;
+    padding: 2%;
+    background-color:cadetblue ;
+    border-radius: 10px;
+}
+#lemail{
+    margin-bottom: 15%;
+}
+#lpassword{
+    margin-bottom: 15%;
+}
+#log-btn{
+    width: 170px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+h2{
+    margin: 0;
+}
+#signlink{
+    text-decoration: none;
+    color: white;
+}
+

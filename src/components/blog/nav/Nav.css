@@ -1,0 +1,28 @@
+
+#nav-wrap{
+    margin: 0;
+    position: sticky;
+    top: 0;
+}
+#nav-wrap>ul{
+    display: grid;
+    grid-template-columns: 70% 10% 10% 10%;
+    background-color: rgba(0, 0, 0, 0.934);
+    color: white;
+    margin-top: 0;
+    height: 60px;
+    align-items: center;
+    list-style: none;
+ 
+}
+#nav-wrap>ul>li>a{
+text-decoration: none;
+color: white;
+cursor: pointer;
+}
+#logo{
+    font-size: x-large;
+}
+#logout{
+    cursor: pointer;
+}
