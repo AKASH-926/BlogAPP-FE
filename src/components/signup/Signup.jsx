@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import "./Signup.css"
+import { useNavigate } from 'react-router-dom'
 export default function Signup() {
 
     const [data, setdata] = useState({ email: "", password: '' })
     const [cpassword, setcpassword] = useState('')
     const [error, seterror] = useState({ email: true, password: true, cpassword: true })
-
+    const navigate = useNavigate()
     const handleSignup = async (e) => {
         e.preventDefault()
         await axios.post('https://dead-rose-kingfisher-slip.cyclic.app/api/signup', data).then((response) => {
@@ -14,6 +15,7 @@ export default function Signup() {
             setdata({ ...data, email: '', password: '' })
             seterror({ ...error, email: true, password: true, cpassword: true })
             setcpassword('')
+            navigate('/')
         }).catch((err) => {
             console.log(err)
         })
