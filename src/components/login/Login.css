@@ -23,6 +23,13 @@
     color: white;
     background-color: black;
     cursor: pointer;
+    transition: 112ms;
+}
+#log-btn:hover{
+    transform: scale(1.1);
+    color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        border-color: white;
 }
 h2{
     margin: 0;

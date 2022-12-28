@@ -25,7 +25,7 @@ export default function Signup() {
         <div id='signup-wrap'>
             <h2>SIGNUP</h2>
             <form >
-                <div>
+                <div className='margin_bott'>
                     <label htmlFor="email">Email</label><br />
                     <input type="email" name="email" id="email" value={data.email} onChange={(e) => {
                         if (e.target.value.includes('@')) {
@@ -37,9 +37,11 @@ export default function Signup() {
                             seterror({ ...error, email: true })
                         }
                         setdata({ ...data, email: e.target.value })
-                    }} />
+                    }} /><br />
+
                 </div>
-                <div>
+                {error.email ? "" : <span className='Sign_error'>Enter Valid Email</span>}
+                <div className='margin_bott'>
                     <label htmlFor="password">Password</label><br />
                     <input type="password" name="password" id="password" value={data.password} onChange={(e) => {
                         if (e.target.value.length >= 6) {
@@ -53,16 +55,19 @@ export default function Signup() {
                         setdata({ ...data, password: e.target.value })
                     }} />
                 </div>
-                <div>
-                    <label htmlFor="confirmPassword">Confrim Password</label><br />
+                {error.password ? "" : <span className='Sign_error'>Password length must greater than 6</span>}
+                <div className='margin_bott'>
+                    <label htmlFor="confirmPassword">Confirm Password</label><br />
                     <input type="password" name="confirmPassword" id="c_password" onChange={(e) => {
                         if (e.target.value === data.password) {
                             seterror({ ...error, cpassword: true })
                         } else {
                             seterror({ ...error, cpassword: false })
                         }
-                    }} />
+                    }} /><br />
+                    {error.cpassword ? "" : <span className='Sign_error'>Password not matches</span>}
                 </div>
+
                 <button id='sign-btn' onClick={(e) => { handleSignup(e) }}>SUBMIT</button>
             </form>
 

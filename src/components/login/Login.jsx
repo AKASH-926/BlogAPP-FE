@@ -11,12 +11,12 @@ export default function Login() {
         e.preventDefault()
         await axios.post('https://dead-rose-kingfisher-slip.cyclic.app/api/login', data).then((response) => {
             window.localStorage.setItem('jwt', response.data.token)
-            alert('login succesfull')
+            alert('Login Successfull')
             setdata({ ...data, email: '', password: '' })
             seterror({ ...error, email: true, password: true, cpassword: true })
             navigate('/homepage')
         }).catch((err) => {
-            console.log(err)
+            alert(err.response.data.message)
         })
     }
 

@@ -16,6 +16,7 @@ margin-bottom: 2%;
    background-color: rgba(109, 158, 255, 0.486);
    border-color:rgba(109, 158, 255, 0.486) ;
    border-radius: 10px;
+   position: relative;
 }
 #title{
     font-size: xx-large;
@@ -24,4 +25,10 @@ margin-bottom: 2%;
 #desc{
     word-break: break-all;
     word-wrap: normal;
+}
+#blog_img{
+    width: 18%;
+    position: absolute;
+    left: 1%;
+    top: 10%;
 }

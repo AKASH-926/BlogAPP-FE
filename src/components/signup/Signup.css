@@ -8,27 +8,35 @@
         width: 15%;
         margin-left: 40%;
         padding: 2%;
-        background-color: cadetblue;
+        background-color:rgb(90, 147, 238);
         border-radius: 10px;
 }
-#email {
-    margin-bottom: 15%;
-}
 
-#password {
-    margin-bottom: 15%;
-}
-#c_password {
-    margin-bottom: 15%;
-}
 #sign-btn{
     width: 170px;
         height: 30px;
         color: white;
         background-color: black;
         cursor: pointer;
+        transition: 112ms;
+}
+#sign-btn:hover{
+    transform: scale(1.1);
+    color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        border-color: white;
 }
 
 h2 {
     margin: 0;
+    color: white;
+}
+
+.Sign_error{
+font-size:10px;
+color: rgb(255, 255, 255);
+}
+
+.margin_bott{
+    margin-bottom: 4%;
 }

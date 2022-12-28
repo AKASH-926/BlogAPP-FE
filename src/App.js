@@ -6,10 +6,13 @@ import Login from './components/login/Login';
 import Protected_Route from './components/Protected_route/Protected_Route';
 import Homepage from './components/blog/Homepage';
 import Create from './components/blog/create/Create';
+import BlogProvider from './components/context/BlogProvider';
+import BlogContext from './components/context/Context';
 function App() {
   return (
 
     <BrowserRouter>
+
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
@@ -18,6 +21,9 @@ function App() {
           <Route path='/create' element={<Create />} />
         </Route>
       </Routes>
+
+
+
 
     </BrowserRouter>
 
